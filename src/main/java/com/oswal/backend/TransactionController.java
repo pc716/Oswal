@@ -15,9 +15,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 
 @RestController
-public class UserController {
-
-
+public class TransactionController {
 
 
 }
