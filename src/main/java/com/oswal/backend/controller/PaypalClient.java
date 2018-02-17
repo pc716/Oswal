@@ -1,4 +1,4 @@
-package com.oswal.backend;
+package com.oswal.backend.controller;
 
 import com.paypal.api.payments.Amount;
 import com.paypal.api.payments.Payer;
