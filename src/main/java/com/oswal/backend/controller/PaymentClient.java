@@ -1,4 +1,5 @@
-package com.oswal.backend;
+package com.oswal.backend.controller;
+
 
 import com.paypal.api.payments.*;
 import com.paypal.base.rest.APIContext;
@@ -22,7 +23,7 @@ public class PaymentClient {
             return payment_object;
         }
         catch(PayPalRESTException e){
-            System.out.println(e);
+            System.out.println(e.getCause() + "\n" + e.getCause());
         }
 
         return null;
@@ -35,7 +36,7 @@ public class PaymentClient {
             payment_object.execute(context, execute);
         }
         catch(PayPalRESTException e){
-            System.out.println(e);
+            System.out.println(e.getCause() + "\n" + e.getCause());
         }
     }
 
