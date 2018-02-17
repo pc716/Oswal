@@ -24,9 +24,9 @@ public class TransactionController {
     }
 
     @RequestMapping(value="/start_transaction", method = RequestMethod.POST)
-    public ResponseEntity<?> start_transaction(@RequestBody JSONObject json){
+    public ResponseEntity<?> start_transaction(@RequestBody Payment payment){
 
-        Payment payment = PaymentParser.parsed_payment(json);
+
 
         String amount = payment.getTransactions().get((0)).getAmount().getTotal();
         PaypalClient paypal_client = new PaypalClient();
