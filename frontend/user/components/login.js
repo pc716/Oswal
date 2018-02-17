@@ -6,38 +6,76 @@ import {
     ScrollView,
     Text,
     TextInput,
-    View
+    View,
+    
 } from 'react-native';
 
+
 class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {email: '',
+                  u_error: false,
+                  password: '',
+                  p_error: false
+                  };
+  }
+
+  // Handles login click (validates email and password)
+  handlePress = () => {
+    // Email = empty
+    if(this.state.email === '') {
+      this.setState({u_error: true});
+    }
+    // Password = empty
+    if(this.state.password === '') {
+      this.setState({p_error: true})
+    }
+  }
+
   render() {
     return (
+
       <View>
-      <Input
-        placeholder='Username'
-        displayError={false}
-        errorStyle={{ color: 'red' }}
-        errorMessage='ENTER A VALID ERROR HERE'
-        containerStyle={ styles.oval }
-      />
-      <Input
-        placeholder='Password'
-        displayError={false}
-        errorStyle={{ color: 'red' }}
-        errorMessage='ENTER A VALID ERROR HERE'
-        containerStyle={ styles.oval }
-      />
-    <Button
-      text='Login'
-      buttonStyle={ styles.buttonOval }
-    />
-    </View>
-        );
+          <Input
+            placeholder='Email'
+            displayError={this.state.u_error}
+            errorStyle={{ color: 'red' }}
+            errorMessage='Please enter a valid email'
+            containerStyle={ styles.oval }
+            onChangeText={(email) => this.setState({email: email, u_error: false})}
+          />
+          <Input
+            placeholder='Password'
+            displayError={this.state.p_error}
+            errorStyle={{ color: 'red' }}
+            errorMessage='Please enter a password'
+            containerStyle={ styles.oval }
+            secureTextEntry={true}
+            onChangeText={(password) => this.setState({password : password, p_error: false})}
+          />
+
+        <Button
+            text='Login'
+            buttonStyle={ styles.buttonOval }
+            onPress={this.handlePress}
+        />
+        <Button
+            text='Create an Account'
+            textStyle={{color : "#2089dc"}}
+            buttonStyle={ styles.buttonCreate }
+            onPress={this.handlePress}
+        />
+    </View>);
   }
 }
 
 
 const styles = StyleSheet.create({
+  buttonCreate: {
+    borderColor: "transparent",
+    backgroundColor: "white"
+  },
   buttonOval: {
     borderRadius: 25,
     borderWidth: 1,
