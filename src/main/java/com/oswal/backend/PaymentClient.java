@@ -1,33 +1,47 @@
 package com.oswal.backend;
 
-import com.paypal.api.payments.Amount;
-import com.paypal.api.payments.Payer;
-import com.paypal.api.payments.Payment;
-import com.paypal.api.payments.RedirectUrls;
-import com.paypal.api.payments.Transaction;
+import com.paypal.api.payments.*;
 import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.PayPalRESTException;
 
 import java.util.*;
 
 public class PaymentClient {
+
     private APIContext context;
+    private Payment payment_object;
+
     public PaymentClient(APIContext context){
         this.context = context;
     }
 
-
     public String create_payment(String amount){
-        Payment payment_object = initialize_payment_object(amount);
+        payment_object = initialize_payment_object(amount);
         try {
-            Payment created_payment = payment_object.create(context);
-            return created_payment.getId();
+            payment_object = payment_object.create(context);
+            return get_redirect_url(payment_object);
         }
         catch(PayPalRESTException e){
             System.out.println(e);
         }
 
         return null;
+    }
+
+    public void execute_payment(String payer_id){
+        PaymentExecution execute = new PaymentExecution();
+        execute.setPayerId(payer_id);
+        try {
+            payment_object.execute(context, execute);
+        }
+        catch(PayPalRESTException e){
+            System.out.println(e);
+        }
+    }
+
+    public String get_redirect_url(Payment payment_object){
+        List<Links> links = payment_object.getLinks();
+        return links.get(1).getHref();
     }
 
     public Payment initialize_payment_object(String amount){

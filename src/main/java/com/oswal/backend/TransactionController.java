@@ -19,7 +19,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class TransactionController {
 
     @RequestMapping("/make_transaction/{recipient}/{amount}", method = RequestMethod.POST)
-    public ResponseEntity<?> make_transaction(@PathVariable("recipient") String recipient,
+    public ResponseEntity<?> start_transaction(@PathVariable("recipient") String recipient,
                                               @PathVariable("amount") double amount){
 
     }
