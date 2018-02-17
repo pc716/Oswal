@@ -20,5 +20,8 @@ public class PaypalClient {
         api_context = new APIContext(client_id,client_secret,"sandbox");
     }
 
+    public PaymentClient create_payment_client(){
+        return new PaymentClient(api_context);
+    }
 
 }

@@ -15,11 +15,11 @@ public class PaymentClient {
         this.context = context;
     }
 
-    public String create_payment(String amount){
+    public Payment create_payment(String amount){
         payment_object = initialize_payment_object(amount);
         try {
             payment_object = payment_object.create(context);
-            return get_redirect_url(payment_object);
+            return payment_object;
         }
         catch(PayPalRESTException e){
             System.out.println(e);
@@ -37,11 +37,6 @@ public class PaymentClient {
         catch(PayPalRESTException e){
             System.out.println(e);
         }
-    }
-
-    public String get_redirect_url(Payment payment_object){
-        List<Links> links = payment_object.getLinks();
-        return links.get(1).getHref();
     }
 
     public Payment initialize_payment_object(String amount){
