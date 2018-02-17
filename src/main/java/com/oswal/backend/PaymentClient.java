@@ -6,19 +6,38 @@ import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.RedirectUrls;
 import com.paypal.api.payments.Transaction;
 import com.paypal.base.rest.APIContext;
+import com.paypal.base.rest.PayPalRESTException;
 
 import java.util.*;
 
 public class PaymentClient {
+    private APIContext context;
+    public PaymentClient(APIContext context){
+        this.context = context;
+    }
 
-    public void create_payment(String amount){
+
+    public String create_payment(String amount){
         Payment payment_object = initialize_payment_object(amount);
+        try {
+            Payment created_payment = payment_object.create(context);
+            return created_payment.getId();
+        }
+        catch(PayPalRESTException e){
+            System.out.println(e);
+        }
+
+        return null;
     }
 
     public Payment initialize_payment_object(String amount){
-        Payment payment_object = new Payment();
         Amount payment_amount = initialize_amount(amount);
-        List<Transaction> transactions = initialize_transaction(payment_amount);
+
+        Payment payment_object = new Payment();
+        payment_object.setIntent("sale");
+        payment_object.setPayer(initialize_payer());
+        payment_object.setTransactions(initialize_transaction(payment_amount));
+        payment_object.setRedirectUrls(initialize_redirect_urls());
 
         return payment_object;
     }
@@ -26,10 +45,26 @@ public class PaymentClient {
     public List<Transaction> initialize_transaction(Amount amount){
         Transaction transaction = new Transaction();
         transaction.setAmount(amount);
+
         return new ArrayList<Transaction>() {{ add(transaction); }};
     }
 
     public Amount initialize_amount(String amount){
         return new Amount("USD", amount);
+    }
+
+    public Payer initialize_payer(){
+        Payer payer = new Payer();
+        payer.setPaymentMethod("paypal");
+
+        return payer;
+    }
+
+    public RedirectUrls initialize_redirect_urls(){
+        RedirectUrls urls = new RedirectUrls();
+        urls.setCancelUrl("https://example.com/cancel");
+        urls.setReturnUrl("https://example.com/return");
+
+        return urls;
     }
 }
