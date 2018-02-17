@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import JSONEncoder
+//import Codable
+//import JSONEncoder
 
 struct Post: Codable {
     let email: String
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var pw: UITextField!
     @IBOutlet weak var button: UIButton!
+    var loginSuccess = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,50 +53,17 @@ class ViewController: UIViewController {
         return emailTest.evaluate(with: testStr)
     }
     
-    @IBAction func loginButtonHandler() {
-        let invalidEmail = !isValidEmail(testStr: (email.text)!)
-        let invalidPw = pw.text?.isEmpty
-        // If empty inputs
-        if(invalidEmail || invalidPw!) {
-            if(invalidEmail) {
-                displayAlert(msg:"Please enter a valid email")
-            } else if(invalidPw!) {
-                displayAlert(msg:"Please enter a valid password")
-            }
-        // Successful login
-        } else {
-            if(loginSuccessful()) {
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-                
-                // Go to next view
-                self.present(nextViewController, animated:true, completion:nil)
-            } else {
-                displayAlert(msg:"you suck")
-            }
-            
-            
-        }
-    }
     
-    func loginSuccessful() {
-        let user = Post(email: "cheo2@gmu.edu", password: "123456");
-        submitPost(post: user) { (error) in
-            if let error = error {
-                fatalError(error.localizedDescription);
-                return false;
-            }
-        return true;
-    }
     
     // We'll need a completion block that returns an error if we run into any problems
     func submitPost(post: Post, completion:((Error?) -> Void)?) {
         var urlComponents = URLComponents()
         urlComponents.scheme = "http"
-        urlComponents.host = "10.194.114.209:8080"
+        urlComponents.host = "10.194.114.209"
+        urlComponents.port = 8080
         urlComponents.path = "/login"
         guard let url = urlComponents.url else { fatalError("Could not create URL from components") }
-        
+        print(url)
         // Specify this request as being a POST method
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -126,6 +96,9 @@ class ViewController: UIViewController {
             // APIs usually respond with the data you just sent in your POST request
             if let data = responseData, let utf8Representation = String(data: data, encoding: .utf8) {
                 print("response: ", utf8Representation)
+                if(utf8Representation.contains("true")) {
+                    self.loginSuccess = true;
+                }
             } else {
                 print("no readable data received in response")
             }
@@ -140,9 +113,41 @@ class ViewController: UIViewController {
         self.present(errAlert, animated: true, completion: nil)
         
     }
-
-
-
+    
+    @IBAction func loginButtonHandler() {
+        let invalidEmail = !isValidEmail(testStr: (email.text)!)
+        let invalidPw = pw.text?.isEmpty
+        // If empty inputs
+        if(invalidEmail || invalidPw!) {
+            if(invalidEmail) {
+                displayAlert(msg:"Please enter a valid email")
+            } else if(invalidPw!) {
+                displayAlert(msg:"Please enter a valid password")
+            }
+            // Successful login
+        } else {
+            if(loginSuccessful()) {
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+                
+                // Go to next view
+                self.present(nextViewController, animated:true, completion:nil)
+            } else {
+                displayAlert(msg:"Authentication failed")
+            }
+            
+            
+        }
+    }
+    
+    func loginSuccessful() -> Bool{
+        let user = Post(email: email.text!, password: pw.text!);
+        submitPost(post: user) { (error) in
+            if let error = error {
+                print(error);
+            }
+        }
+        return loginSuccess;
 }
 
 }
