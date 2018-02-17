@@ -15,7 +15,13 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 
 @RestController
+@RequestMapping("/transactions")
 public class TransactionController {
 
+    @RequestMapping("/make_transaction/{recipient}/{amount}", method = RequestMethod.POST)
+    public ResponseEntity<?> make_transaction(@PathVariable("recipient") String recipient,
+                                              @PathVariable("amount") double amount){
+
+    }
 
 }
