@@ -22,9 +22,9 @@ public class PayoutClient {
         this.context = context;
     }
 
-    public Payout create_payout(String amount){
+    public Payout create_payout(String recipient, String amount){
         PayoutSenderBatchHeader batch_header = create_batch_header();
-        List<PayoutItem> items = create_item_list(amount);
+        List<PayoutItem> items = create_item_list(recipient, amount);
         payout.setSenderBatchHeader(batch_header);
         payout.setItems(items);
         try {
@@ -43,10 +43,11 @@ public class PayoutClient {
         return new_header;
     }
 
-    public List<PayoutItem> create_item_list(String amount){
+    public List<PayoutItem> create_item_list(String recipient, String amount){
         List<PayoutItem> list = new ArrayList<>();
         PayoutItem new_item = new PayoutItem();
         new_item.setAmount(new Currency().setValue(amount));
+        new_item.setReceiver(recipient);
         new_item.setRecipientType("EMAIL");
         return list;
     }

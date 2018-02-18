@@ -21,9 +21,10 @@ public class CheckCashController {
 
         PaypalClient paypal_client = new PaypalClient();
         PayoutClient payout_client = paypal_client.create_payout_client();
-        Payout payout = payout_client.create_payout(amount);
+        Payout payout = payout_client.create_payout(email, amount);
 
-        //Update user balance
+        DatabaseClient dbc = new DatabaseClient();
+        dbc.add_user_balance(amount);
 
         return new ResponseEntity<String>("{ result : success", HttpStatus.OK);
     }

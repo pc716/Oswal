@@ -27,6 +27,16 @@ public class DatabaseClient {
         return x;
     }
 
+    public String get_user_balance(String email){
+        String amount = null;
+
+        return amount;
+    }
+
+
+    public void add_user_balance(String amount){
+
+    }
 
 
 
