@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var customView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,8 +22,21 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //self.viewHeightConstraint.constant = self.view.bounds.height / 2
+    }
+    
+    @IBAction func onShowHideButtonPress(_ sender: UIBarButtonItem) {
+        self.customView.isHidden = !self.customView.isHidden
+        self.view.layoutIfNeeded()
+        print(self.customView.isHidden)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
