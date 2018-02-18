@@ -30,6 +30,8 @@ public class TransactionController {
     @RequestMapping(value="/finalize_transaction/{recipient}", method = RequestMethod.POST)
     public ResponseEntity<?> finalize_transaction(@RequestBody Map<String,Object> map, @PathVariable("recipient") String recipient){
         String execute_url = (String) map.get("url");
+
+        return null;
     }
 
 }

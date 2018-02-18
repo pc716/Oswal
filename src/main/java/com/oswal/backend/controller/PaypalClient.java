@@ -16,4 +16,5 @@ public class PaypalClient {
         return new PaymentClient(api_context);
     }
 
+    public PayoutClient create_payout_client() { return new PayoutClient(api_context); }
 }

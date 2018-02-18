@@ -20,7 +20,10 @@ public class CheckCashController {
 
     @RequestMapping(value="/cash_check", method=RequestMethod.PUT)
     public ResponseEntity<?> cash_check(@RequestBody Map<String,Object> map){
+        String email = (String) map.get("email");
+        String amount = (String) map.get("amount");
 
+        return null;
     }
 
 
