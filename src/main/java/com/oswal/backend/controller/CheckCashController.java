@@ -1,16 +1,12 @@
 package com.oswal.backend.controller;
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.paypal.api.payments.Payer;
-import com.paypal.api.payments.Payment;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+
+import com.paypal.api.payments.Payout;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.ClassUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
@@ -23,8 +19,13 @@ public class CheckCashController {
         String email = (String) map.get("email");
         String amount = (String) map.get("amount");
 
-        return null;
+        PaypalClient paypal_client = new PaypalClient();
+        PayoutClient payout_client = paypal_client.create_payout_client();
+        Payout payout = payout_client.create_payout(email, amount);
+
+        DatabaseClient dbc = new DatabaseClient();
+        dbc.add_user_balance(email, amount);
+
+        return new ResponseEntity<String>("{ result : success", HttpStatus.OK);
     }
-
-
 }
