@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6522EF4F20390B9700039A78 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522EF4E20390B9700039A78 /* DepositViewController.swift */; };
+		6522EF512039182700039A78 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522EF502039182700039A78 /* BalanceViewController.swift */; };
+		6522EF532039182E00039A78 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522EF522039182E00039A78 /* TransferViewController.swift */; };
 		65C918512038A22E00D13193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C918502038A22E00D13193 /* AppDelegate.swift */; };
 		65C918532038A22E00D13193 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C918522038A22E00D13193 /* ViewController.swift */; };
 		65C918562038A22E00D13193 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C918542038A22E00D13193 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6522EF4E20390B9700039A78 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
+		6522EF502039182700039A78 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		6522EF522039182E00039A78 /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		65C9184D2038A22E00D13193 /* Oswal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oswal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C918502038A22E00D13193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C918522038A22E00D13193 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +112,9 @@
 				65C918592038A22E00D13193 /* LaunchScreen.storyboard */,
 				65C9185C2038A22E00D13193 /* Info.plist */,
 				65C9187E2038A3A300D13193 /* ProfileViewController.swift */,
+				6522EF4E20390B9700039A78 /* DepositViewController.swift */,
+				6522EF502039182700039A78 /* BalanceViewController.swift */,
+				6522EF522039182E00039A78 /* TransferViewController.swift */,
 			);
 			path = Oswal;
 			sourceTree = "<group>";
@@ -263,6 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65C9187F2038A3A300D13193 /* ProfileViewController.swift in Sources */,
+				6522EF532039182E00039A78 /* TransferViewController.swift in Sources */,
+				6522EF4F20390B9700039A78 /* DepositViewController.swift in Sources */,
+				6522EF512039182700039A78 /* BalanceViewController.swift in Sources */,
 				65C918532038A22E00D13193 /* ViewController.swift in Sources */,
 				65C918512038A22E00D13193 /* AppDelegate.swift in Sources */,
 			);
@@ -511,6 +523,7 @@
 				65C918772038A22E00D13193 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65C918782038A22E00D13193 /* Build configuration list for PBXNativeTarget "OswalTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +532,7 @@
 				65C9187A2038A22E00D13193 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65C9187B2038A22E00D13193 /* Build configuration list for PBXNativeTarget "OswalUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +541,7 @@
 				65C9187D2038A22E00D13193 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

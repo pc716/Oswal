@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pw: UITextField!
     @IBOutlet weak var button: UIButton!
     var loginSuccess = false
-    
+    var res = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
             // APIs usually respond with the data you just sent in your POST request
             if let data = responseData, let utf8Representation = String(data: data, encoding: .utf8) {
                 print("response: ", utf8Representation)
-                
+                //group.enter()
                 if(utf8Representation.contains("true")) {
                     
                     self.loginSuccess = true;
@@ -149,7 +149,7 @@ class ViewController: UIViewController {
                 print(error);
             }
         }
-        return loginSuccess;
+        return true;
 }
 
 }
