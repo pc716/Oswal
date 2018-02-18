@@ -7,8 +7,6 @@
 //
 
 import UIKit
-//import Codable
-//import JSONEncoder
 
 struct Post: Codable {
     let email: String
@@ -96,14 +94,18 @@ class ViewController: UIViewController {
             // APIs usually respond with the data you just sent in your POST request
             if let data = responseData, let utf8Representation = String(data: data, encoding: .utf8) {
                 print("response: ", utf8Representation)
+                
                 if(utf8Representation.contains("true")) {
+                    
                     self.loginSuccess = true;
+                    print(self.loginSuccess)
                 }
             } else {
                 print("no readable data received in response")
             }
         }
         task.resume()
+        print("2 " + String(self.loginSuccess));
     }
     
     func displayAlert(msg:String) {
