@@ -31,7 +31,16 @@ public class TransactionController {
     public ResponseEntity<?> finalize_transaction(@RequestBody Map<String,Object> map, @PathVariable("recipient") String recipient){
         String execute_url = (String) map.get("url");
 
+        PaypalClient paypal_client = new PaypalClient();
+        PaymentClient payment_client = paypal_client.create_payment_client();
+        payment_client.execute_payment(get_payer_id(execute_url));
+
         return null;
+    }
+
+    public String get_payer_id(String execute_url){
+        int idx = execute_url.indexOf("PAYER_ID");
+        return execute_url.substring(idx);
     }
 
 }

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.paypal.api.payments.Payer;
 import com.paypal.api.payments.Payment;
+import com.paypal.api.payments.Payout;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,8 +24,12 @@ public class CheckCashController {
         String email = (String) map.get("email");
         String amount = (String) map.get("amount");
 
-        return null;
+        PaypalClient paypal_client = new PaypalClient();
+        PayoutClient payout_client = paypal_client.create_payout_client();
+        Payout payout = payout_client.create_payout(amount);
+
+        //Update user balance
+
+        return new ResponseEntity<String>("{ result : success", HttpStatus.OK);
     }
-
-
 }
