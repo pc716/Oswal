@@ -1,19 +1,11 @@
 package com.oswal.backend.controller;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
-import com.google.gson.JsonObject;
-import com.paypal.api.payments.Payment;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.ClassUtils;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponentsBuilder;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
@@ -28,16 +20,12 @@ public class LoginController {
         String email = (String) map.get("email");
         String password = (String) map.get("password");
 
-        valid = true; //if in database
+        DatabaseClient db_client = new DatabaseClient();
+        valid = db_client.checkUser(email,password);
 
 
         String response = "{ 'valid' : '" + valid + "'}";
 
         return new ResponseEntity<String>(response , HttpStatus.OK);
     }
-
-
-
-
-
 }
