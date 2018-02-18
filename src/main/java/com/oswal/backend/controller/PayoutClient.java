@@ -17,7 +17,6 @@ public class PayoutClient {
     private APIContext context;
     private Payout payout;
 
-
     public PayoutClient(APIContext context){
         this.context = context;
     }
