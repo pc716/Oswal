@@ -1,6 +1,7 @@
 package com.oswal.backend.controller;
 
 import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.google.gson.JsonObject;
 import com.paypal.api.payments.Payment;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,21 +15,21 @@ import org.springframework.util.ClassUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.util.Map;
+
 @RestController
 public class LoginController {
 
     @RequestMapping(value="/login", method = RequestMethod.POST)
-    public ResponseEntity<?> start_transaction(@RequestBody JSONObject json) {
+    public ResponseEntity<?> start_transaction(@RequestBody Map<String,Object> map) {
         boolean valid = false;
-        try {
-            String email = json.getString("email");
-            String password = json.getString("password");
 
-            valid = true; //if in database
-        }
-        catch(JSONException e){
-            System.out.println(e);
-        }
+        System.out.println(map);
+        String email = (String) map.get("email");
+        String password = (String) map.get("password");
+
+        valid = true; //if in database
+
 
         String response = "{ 'valid' : '" + valid + "'}";
 
