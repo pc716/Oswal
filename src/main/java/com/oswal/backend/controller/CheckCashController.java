@@ -24,7 +24,7 @@ public class CheckCashController {
         Payout payout = payout_client.create_payout(email, amount);
 
         DatabaseClient dbc = new DatabaseClient();
-        dbc.add_user_balance(amount);
+        dbc.add_user_balance(email, amount);
 
         return new ResponseEntity<String>("{ result : success", HttpStatus.OK);
     }

@@ -4,6 +4,7 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 
 
 public class DatabaseClient {
@@ -28,14 +29,17 @@ public class DatabaseClient {
     }
 
     public String get_user_balance(String email){
-        String amount = null;
-
-        return amount;
+        MongoCollection collection = database.getCollection("users");
+        Document d = (Document) collection.find(new BasicDBObject("email",email));
+        return (String) d.get("balance");
     }
 
 
-    public void add_user_balance(String amount){
-
+    public void add_user_balance(String email, String amount){
+        MongoCollection collection = database.getCollection("users");
+        Document d = (Document) collection.find(new BasicDBObject("email",email));
+        double balance = Double.parseDouble((String) d.get("balance")) + Double.parseDouble(amount);
+        collection.updateOne(new BasicDBObject("email",email), new BasicDBObject("email",email).append("balance",balance));
     }
 
 
