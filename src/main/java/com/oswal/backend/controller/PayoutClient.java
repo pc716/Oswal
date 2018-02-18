@@ -1,15 +1,15 @@
 package com.oswal.backend.controller;
 
 
-import com.paypal.api.payments.*;
-import com.paypal.base.rest.*;
+import com.paypal.api.payments.Currency;
+import com.paypal.api.payments.Payout;
+import com.paypal.api.payments.PayoutItem;
+import com.paypal.api.payments.PayoutSenderBatchHeader;
 import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.PayPalRESTException;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 public class PayoutClient {
