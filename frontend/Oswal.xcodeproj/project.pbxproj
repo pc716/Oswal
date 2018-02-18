@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A863C8EABF647D71EC92B20 /* Pods_OswalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A006F146A6D073D082BA5A56 /* Pods_OswalUITests.framework */; };
-		5CA7471C2464EE8310B160A3 /* Pods_OswalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA76D993005EA7631A843835 /* Pods_OswalTests.framework */; };
 		6522EF4F20390B9700039A78 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522EF4E20390B9700039A78 /* DepositViewController.swift */; };
 		6522EF512039182700039A78 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522EF502039182700039A78 /* BalanceViewController.swift */; };
 		6522EF532039182E00039A78 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522EF522039182E00039A78 /* TransferViewController.swift */; };
@@ -20,7 +18,6 @@
 		65C918662038A22E00D13193 /* OswalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C918652038A22E00D13193 /* OswalTests.swift */; };
 		65C918712038A22E00D13193 /* OswalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C918702038A22E00D13193 /* OswalUITests.swift */; };
 		65C9187F2038A3A300D13193 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9187E2038A3A300D13193 /* ProfileViewController.swift */; };
-		746A4C2A0261616E540DBCD4 /* Pods_Oswal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327DF57533CDEE063403B8FD /* Pods_Oswal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,14 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
-		2D98F146FBFA75138B580F8F /* Pods-OswalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OswalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OswalUITests/Pods-OswalUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		327DF57533CDEE063403B8FD /* Pods_Oswal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Oswal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-=======
 		6522EF4E20390B9700039A78 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
 		6522EF502039182700039A78 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		6522EF522039182E00039A78 /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
->>>>>>> e92e75f3fe92f5f9ed2c472a88bf211ac582478c
 		65C9184D2038A22E00D13193 /* Oswal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oswal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C918502038A22E00D13193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C918522038A22E00D13193 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,13 +55,6 @@
 		65C918702038A22E00D13193 /* OswalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OswalUITests.swift; sourceTree = "<group>"; };
 		65C918722038A22E00D13193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65C9187E2038A3A300D13193 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		6807B5064CCA501733FE4D67 /* Pods-OswalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OswalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OswalTests/Pods-OswalTests.debug.xcconfig"; sourceTree = "<group>"; };
-		76FE754ABB1028FA8144ACE5 /* Pods-Oswal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oswal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Oswal/Pods-Oswal.release.xcconfig"; sourceTree = "<group>"; };
-		9A850B2AD1DA43AF9EAAA2F4 /* Pods-OswalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OswalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OswalUITests/Pods-OswalUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A006F146A6D073D082BA5A56 /* Pods_OswalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OswalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8B8926DA52056AF2DC68648 /* Pods-OswalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OswalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OswalTests/Pods-OswalTests.release.xcconfig"; sourceTree = "<group>"; };
-		BA76D993005EA7631A843835 /* Pods_OswalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OswalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F67B0B4EE3BB38EE11C9F3F9 /* Pods-Oswal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oswal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Oswal/Pods-Oswal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				746A4C2A0261616E540DBCD4 /* Pods_Oswal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA7471C2464EE8310B160A3 /* Pods_OswalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,26 +76,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A863C8EABF647D71EC92B20 /* Pods_OswalUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F1E356510AEBBB9A7507801 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F67B0B4EE3BB38EE11C9F3F9 /* Pods-Oswal.debug.xcconfig */,
-				76FE754ABB1028FA8144ACE5 /* Pods-Oswal.release.xcconfig */,
-				6807B5064CCA501733FE4D67 /* Pods-OswalTests.debug.xcconfig */,
-				A8B8926DA52056AF2DC68648 /* Pods-OswalTests.release.xcconfig */,
-				2D98F146FBFA75138B580F8F /* Pods-OswalUITests.debug.xcconfig */,
-				9A850B2AD1DA43AF9EAAA2F4 /* Pods-OswalUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		65C918442038A22E00D13193 = {
 			isa = PBXGroup;
 			children = (
@@ -120,8 +89,6 @@
 				65C918642038A22E00D13193 /* OswalTests */,
 				65C9186F2038A22E00D13193 /* OswalUITests */,
 				65C9184E2038A22E00D13193 /* Products */,
-				1F1E356510AEBBB9A7507801 /* Pods */,
-				779F7B868CB2D52DB5C3CDFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,16 +137,6 @@
 			path = OswalUITests;
 			sourceTree = "<group>";
 		};
-		779F7B868CB2D52DB5C3CDFD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				327DF57533CDEE063403B8FD /* Pods_Oswal.framework */,
-				BA76D993005EA7631A843835 /* Pods_OswalTests.framework */,
-				A006F146A6D073D082BA5A56 /* Pods_OswalUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,12 +144,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65C918752038A22E00D13193 /* Build configuration list for PBXNativeTarget "Oswal" */;
 			buildPhases = (
-				EA567160AB1F7889E6DEE9CC /* [CP] Check Pods Manifest.lock */,
 				65C918492038A22E00D13193 /* Sources */,
 				65C9184A2038A22E00D13193 /* Frameworks */,
 				65C9184B2038A22E00D13193 /* Resources */,
-				097A9C1C9EA4FE3598491571 /* [CP] Embed Pods Frameworks */,
-				E65DE4717398D6EE1BD9882C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,12 +161,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65C918782038A22E00D13193 /* Build configuration list for PBXNativeTarget "OswalTests" */;
 			buildPhases = (
-				06D1B90DF5399AE41ED8CAC0 /* [CP] Check Pods Manifest.lock */,
 				65C9185D2038A22E00D13193 /* Sources */,
 				65C9185E2038A22E00D13193 /* Frameworks */,
 				65C9185F2038A22E00D13193 /* Resources */,
-				582A1DC1073D862956D3FBEE /* [CP] Embed Pods Frameworks */,
-				2091BAE8375BF1A84F8753B9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,12 +179,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65C9187B2038A22E00D13193 /* Build configuration list for PBXNativeTarget "OswalUITests" */;
 			buildPhases = (
-				CB2393B179DA3EB0BF6D6736 /* [CP] Check Pods Manifest.lock */,
 				65C918682038A22E00D13193 /* Sources */,
 				65C918692038A22E00D13193 /* Frameworks */,
 				65C9186A2038A22E00D13193 /* Resources */,
-				52C7A445FD7ADBA7193975C0 /* [CP] Embed Pods Frameworks */,
-				9EBD7184D459AA19459A3E2D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -318,156 +266,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		06D1B90DF5399AE41ED8CAC0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OswalTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		097A9C1C9EA4FE3598491571 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Oswal/Pods-Oswal-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SideMenuController/SideMenuController.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuController.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Oswal/Pods-Oswal-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2091BAE8375BF1A84F8753B9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OswalTests/Pods-OswalTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		52C7A445FD7ADBA7193975C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OswalUITests/Pods-OswalUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		582A1DC1073D862956D3FBEE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OswalTests/Pods-OswalTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9EBD7184D459AA19459A3E2D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OswalUITests/Pods-OswalUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB2393B179DA3EB0BF6D6736 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OswalUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E65DE4717398D6EE1BD9882C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Oswal/Pods-Oswal-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA567160AB1F7889E6DEE9CC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Oswal-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		65C918492038A22E00D13193 /* Sources */ = {
@@ -631,7 +429,6 @@
 		};
 		65C918762038A22E00D13193 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F67B0B4EE3BB38EE11C9F3F9 /* Pods-Oswal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A6YJ844WQU;
@@ -645,7 +442,6 @@
 		};
 		65C918772038A22E00D13193 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76FE754ABB1028FA8144ACE5 /* Pods-Oswal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A6YJ844WQU;
@@ -659,7 +455,6 @@
 		};
 		65C918792038A22E00D13193 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6807B5064CCA501733FE4D67 /* Pods-OswalTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -674,7 +469,6 @@
 		};
 		65C9187A2038A22E00D13193 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8B8926DA52056AF2DC68648 /* Pods-OswalTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -689,7 +483,6 @@
 		};
 		65C9187C2038A22E00D13193 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D98F146FBFA75138B580F8F /* Pods-OswalUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = OswalUITests/Info.plist;
@@ -703,7 +496,6 @@
 		};
 		65C9187D2038A22E00D13193 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A850B2AD1DA43AF9EAAA2F4 /* Pods-OswalUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = OswalUITests/Info.plist;

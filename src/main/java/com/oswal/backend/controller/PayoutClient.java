@@ -1,16 +1,13 @@
 package com.oswal.backend.controller;
 
-
 import com.paypal.api.payments.Currency;
 import com.paypal.api.payments.Payout;
 import com.paypal.api.payments.PayoutItem;
 import com.paypal.api.payments.PayoutSenderBatchHeader;
 import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.PayPalRESTException;
-
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class PayoutClient {
 
@@ -50,10 +47,5 @@ public class PayoutClient {
         new_item.setRecipientType("EMAIL");
         return list;
     }
-
-
-
-
-
 
 }

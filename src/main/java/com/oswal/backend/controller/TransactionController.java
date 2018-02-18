@@ -22,7 +22,7 @@ public class TransactionController {
         return new ResponseEntity<String>(created_payment.toString(), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/finalize_transaction/{recipient}/{amount}", method = RequestMethod.POST)
+    @RequestMapping(value = "/finalize_transaction/{recipient}/{amount}", method=RequestMethod.POST)
     public ResponseEntity<?> finalize_transaction(@RequestBody Map<String, Object> map,
                                                   @PathVariable("recipient") String recipient,
                                                   @PathVariable("amount") String amount) {

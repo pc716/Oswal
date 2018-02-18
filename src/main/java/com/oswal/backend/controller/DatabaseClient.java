@@ -6,7 +6,6 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
-
 public class DatabaseClient {
 
     private static MongoClient mongo_client = new MongoClient("localhost", 27017);
@@ -34,15 +33,11 @@ public class DatabaseClient {
         return (String) d.get("balance");
     }
 
-
     public void add_user_balance(String email, String amount){
         MongoCollection collection = database.getCollection("users");
         Document d = (Document) collection.find(new BasicDBObject("email",email));
         double balance = Double.parseDouble((String) d.get("balance")) + Double.parseDouble(amount);
         collection.updateOne(new BasicDBObject("email",email), new BasicDBObject("email",email).append("balance",balance));
     }
-
-
-
 
 }
